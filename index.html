@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laminate</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="h-screen pl-16">
+        <nav class="flex justify-between items-center max-w-6xl mx-auto my-0 p-20 h-20">
+            <span class="text-5xl">LOGO</span>
+            <ul class="flex gap-20">
+                <li class="text-xl cursor-pointer">Services</li>
+                <li class="text-xl cursor-pointer">Pricing </li>
+                <li class="text-xl cursor-pointer">Place Order </li>
+                <li class="text-xl cursor-pointer">About Us</li>
+            </ul>
+        </nav>
+        <main class="flex justify-between items-center max-w-6xl mx-auto my-0 p-10 h-[70vh] gap-10">
+            <!-- title and description -->
+            <div>
+                <p class="text-5xl">Welcome to <h1 class="font-bold text-5xl">Student Printing & Laminating Service</h1></p><br>
+                <p class="text-2xl">Your one-stop solution for high-quality printing and Laminating needs</p> 
+            </div>
+            <!-- img -->
+            <img src="https://cdn0.iconfinder.com/data/icons/elasto-computer-accessories-and-devices/26/27_laminator-512.png" >
+        </main>
+    </section>
+    <section class="h-[50vh] gap-10">
+        <h1 class="text-center text-5xl">Our Services</h1>
+        <main class="flex justify-center items-center h-[50vh] w-full">
+            <div class="max-w-6xl flex gap-20">
+              <!-- Printing Service Card -->
+              <div class="bg-white p-6 rounded-md shadow-lg cursor-default">
+                <h2 class="text-3xl font-semibold mb-2">Printing Service</h2>
+                <p class="text-xl">We offer high-quality printing service for various types of documents, including essays, reports, presentations, and more.</p>
+              </div>
+    
+              <!-- Laminating Service Card -->
+              <div class="bg-white p-6 rounded-md shadow-lg cursor-default">
+                <h2 class="text-3xl font-semibold mb-2">Laminating Service</h2>
+                <p class="text-xl">Protect your important documents with our laminating services. We offer lamination for documents of all sizes.</p>
+              </div>
+            </div>
+        </main>
+    </section>
+    
+    <section class="h-screen"></section>
+    <section class="h-screen"></section>
+    <section class="h-screen"></section>
+</body>
+<!--Style for global scope-->
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        list-style: none;
+        text-decoration: none;
+        font-family: "Poppins", sans-serif;
+    }
+    span{
+        font-family: 'Julius Sans One',sans-serif;
+        font-weight: bold;
+    }
+</style>
+<!--JS-->
+<script>
+    // toggle btn
+    const toggleBtn = () => {
+        //get the doms
+        const section = document.querySelectorAll('section');
+        const nav = document.querySelectorAll('ul li');
+
+
+        // function to toggleScroll
+        const toggleScroll = (section) => {section.scrollIntoView({behavior: 'smooth'})};
+
+        // addEvent to the list
+        nav[0].addEventListener('click', () => toggleScroll(section[1]))
+        nav[1].addEventListener('click', () => toggleScroll(section[2]))
+        nav[2].addEventListener('click', () => toggleScroll(section[3]))
+        nav[3].addEventListener('click', () => toggleScroll(section[4]))
+
+    }
+    toggleBtn()
+</script>
+</html>
