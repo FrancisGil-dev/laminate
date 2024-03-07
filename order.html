@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="submit_order.php" method="post">
+        <div class="form-group">
+            <label class='text-info' for="documenttype">Document Type:</label>
+            <select id="documenttype"  class='form-control select-control' name="document-type">
+                <option value="printing">Printing</option>
+                <option value="laminating">Laminating</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label class='text-info' for="quantity">Quantity:</label>
+            <input  type="number" class='form-control' id="quantity" name="quantity" min="1" required>
+        </div>
+
+        <div class="form-group">
+            <label class='text-info' for="delivery">Delivery:</label>
+            <input   type="radio" id="delivery-yes" class='form-check'  name="delivery" value="yes" required>
+            <label for="delivery-yes">Yes</label>
+            <input  type="radio" id="delivery-no" class='form-check' name="delivery" value="no">
+            <label for="delivery-no">No</label>
+        </div>
+
+        <div class="footer">
+            <button class='place-order'  type="submit">Place Order</button>
+        </div>
+                <p class='footer'>&copy; 2024 Student Printing & Laminating Services. All rights reserved.</p>
+
+    </form>
+</body>
+</html>
